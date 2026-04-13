@@ -1,0 +1,146 @@
+{
+  "file": "includes/modules/Other/affiliates_adv/api/class.affiliates_adv_apiroutes.php",
+  "class": "affiliates_adv",
+  "name": "AffiliatesAdvancedAPI",
+  "description": "Advanced affiliate API routes",
+  "category": [
+    {
+      "name": "AffiliatesAdvanced",
+      "description": "Affiliate advanced endpoints"
+    }
+  ],
+  "route": {
+    "GET /affiliates_adv/@client_id/info": {
+      "name": "Get Affiliate Info",
+      "description": "Return affiliate summary and stats",
+      "param": [
+        {
+          "type": "int",
+          "name": "client_id",
+          "description": "Client ID",
+          "inurl": true
+        }
+      ],
+      "route": "GET /affiliates_adv/@client_id/info",
+      "auth": false,
+      "handle": "getInfo",
+      "uuid": "8e11ecda-7fe0-45dc-b05e-a2006a4da100",
+      "priority": 10,
+      "category": "AffiliatesAdvanced",
+      "http": "GET",
+      "address": "/affiliates_adv/@client_id/info"
+    },
+    "GET /affiliates_adv/@client_id/commission-plans": {
+      "name": "Get Commission Plans",
+      "description": "Return commission plans for client",
+      "param": [
+        {
+          "type": "int",
+          "name": "client_id",
+          "description": "Client ID",
+          "inurl": true
+        }
+      ],
+      "route": "GET /affiliates_adv/@client_id/commission-plans",
+      "auth": false,
+      "handle": "getCommissionPlans",
+      "uuid": "8e11ecda-7fe0-45dc-b05e-a2006a4da101",
+      "priority": 10,
+      "category": "AffiliatesAdvanced",
+      "http": "GET",
+      "address": "/affiliates_adv/@client_id/commission-plans"
+    },
+    "POST /affiliates_adv/@client_id/commission-plan/@commission_id": {
+      "name": "Set Commission Plan",
+      "description": "Set selected commission plan",
+      "param": [
+        {
+          "type": "int",
+          "name": "client_id",
+          "description": "Client ID",
+          "inurl": true
+        },
+        {
+          "type": "int",
+          "name": "commission_id",
+          "description": "Commission plan ID",
+          "inurl": true
+        }
+      ],
+      "route": "POST /affiliates_adv/@client_id/commission-plan/@commission_id",
+      "auth": false,
+      "handle": "setCommissionPlan",
+      "uuid": "8e11ecda-7fe0-45dc-b05e-a2006a4da102",
+      "priority": 10,
+      "category": "AffiliatesAdvanced",
+      "http": "POST",
+      "address": "/affiliates_adv/@client_id/commission-plan/@commission_id"
+    },
+    "POST /affiliates_adv/@client_id/vouchers/@plan_id": {
+      "name": "Create Voucher",
+      "description": "Create affiliate voucher",
+      "param": [
+        {
+          "type": "int",
+          "name": "client_id",
+          "description": "Client ID",
+          "inurl": true
+        },
+        {
+          "type": "int",
+          "name": "plan_id",
+          "description": "Commission plan ID",
+          "inurl": true
+        }
+      ],
+      "route": "POST /affiliates_adv/@client_id/vouchers/@plan_id",
+      "auth": false,
+      "handle": "addVoucher",
+      "uuid": "8e11ecda-7fe0-45dc-b05e-a2006a4da103",
+      "priority": 10,
+      "category": "AffiliatesAdvanced",
+      "http": "POST",
+      "address": "/affiliates_adv/@client_id/vouchers/@plan_id"
+    },
+    "GET /affiliates_adv/@client_id/vouchers": {
+      "name": "Get Vouchers",
+      "description": "Return client vouchers",
+      "param": [
+        {
+          "type": "int",
+          "name": "client_id",
+          "description": "Client ID",
+          "inurl": true
+        }
+      ],
+      "route": "GET /affiliates_adv/@client_id/vouchers",
+      "auth": false,
+      "handle": "getVouchers",
+      "uuid": "8e11ecda-7fe0-45dc-b05e-a2006a4da104",
+      "priority": 10,
+      "category": "AffiliatesAdvanced",
+      "http": "GET",
+      "address": "/affiliates_adv/@client_id/vouchers"
+    },
+    "GET /affiliates_adv/@client_id/commissions": {
+      "name": "Get Commissions",
+      "description": "Return client commissions with pagination",
+      "param": [
+        {
+          "type": "int",
+          "name": "client_id",
+          "description": "Client ID",
+          "inurl": true
+        }
+      ],
+      "route": "GET /affiliates_adv/@client_id/commissions",
+      "auth": false,
+      "handle": "getCommissions",
+      "uuid": "8e11ecda-7fe0-45dc-b05e-a2006a4da105",
+      "priority": 10,
+      "category": "AffiliatesAdvanced",
+      "http": "GET",
+      "address": "/affiliates_adv/@client_id/commissions"
+    }
+  }
+}
